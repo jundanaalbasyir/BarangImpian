@@ -16,33 +16,33 @@
         app:cardCornerRadius="2dp"
         app:cardElevation="2dp"
         app:cardPreventCornerOverlap="false"
-        app:contentPaddingTop="5dp"
-        app:contentPaddingBottom="10dp">
+        app:contentPadding="0dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></RelativeLayout>
 
         <LinearLayout
-            android:id="@+id/liniear1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingTop="20dp">
 
             <LinearLayout
-                android:id="@+id/liniear21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/urutan"
-                    android:layout_width="40dp"
+                    android:layout_width="150px"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#00BCD4"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:text="1"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
                     android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:background="@color/cardview_shadow_start_color"
+                    android:text="1" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -60,8 +60,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="11dp"
-                            android:paddingLeft="5dp"
                             android:text="25 April 2017" />
 
                         <TextView
@@ -69,12 +67,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:textSize="11dp"
                             android:text="-" />
 
                         <TextView
                             android:id="@+id/berhasil"
-                            android:textSize="11dp"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.20"
@@ -89,13 +86,25 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/barang1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Sepeda anak dini"
-                            android:paddingLeft="5dp"
-                            android:textStyle="bold" />
+                            android:id="@+id/barang2"
+                            android:layout_width="100dp"
+                            android:layout_height="52dp"
+                            android:textStyle="bold"
+                            android:text="Sepeda anak dini" />
 
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ditukar dengan " />
+
+                        <TextView
+                            android:id="@+id/barang1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="46dp"
+                            android:textStyle="bold"
+                            android:text="jam tangan anti badaijjnjnjnjn" />
 
                     </LinearLayout>
 
@@ -104,7 +113,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/liniear22"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

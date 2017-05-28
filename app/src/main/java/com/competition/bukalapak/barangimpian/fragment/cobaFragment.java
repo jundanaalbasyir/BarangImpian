@@ -1,6 +1,7 @@
 package com.competition.bukalapak.barangimpian.fragment;
 
 import android.app.ProgressDialog;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -61,6 +62,12 @@ public class cobaFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_coba, container, false);
     }
 
+//    public void tambahImpian(View view){
+//        Intent intent = new Intent(view.getContext(),tambahImpian.class);
+//        startActivity(intent);
+//    }
+
+
     private class AsyncFetch extends AsyncTask<String, String, String> {
         ProgressDialog pdLoading = new ProgressDialog(getActivity());
         HttpURLConnection conn;
@@ -85,7 +92,7 @@ public class cobaFragment extends Fragment {
                 // Even you can make call to php file which returns json data
 
 //                url = new URL("http://barangimpian.com/api/timeline.php");
-                url = new URL("http://barangimpian.com/api/dummy_tl.json");
+                url = new URL("http://barangimpian.com/api/timeline.phpn");
 
             } catch (MalformedURLException e) {
                 // TODO Auto-generated catch block
@@ -93,8 +100,11 @@ public class cobaFragment extends Fragment {
                 return e.toString();
             }
             try {
-                String user_id = "32216311";
-                String token = "NrrX9XsHWWqqzZeKz";
+                SharedPreferences pref = getContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+
+                String user_id = pref.getString("user_id", null);
+                String token = pref.getString("token", null);
+
                 // Setup HttpURLConnection class to send and receive data from php and mysql
                 conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(READ_TIMEOUT);

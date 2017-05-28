@@ -47,7 +47,7 @@ public class jejakFragment extends Fragment {
     private jejakAdapter mAdapter;
     SwipeRefreshLayout swLayout;
 
-    @BindView(R.id.timeline_list_jejak)
+    @BindView(R.id.timeline_list_coba)
     RecyclerView mRecyclerView;
 
     public static jejakFragment newInstance() {
@@ -162,7 +162,6 @@ public class jejakFragment extends Fragment {
             pdLoading.dismiss();
             try {
                 JSONObject resultObject=new JSONObject(result);
-
                 String results=resultObject.getString("results");
                 JSONArray jArray = new JSONArray(results);
 
@@ -175,14 +174,12 @@ public class jejakFragment extends Fragment {
                     dataIni.kd_trx_bl_2= json_data.getString("kd_trx_bl_2");
                     dataIni.user_1= json_data.getString("user_1");
                     dataIni.user_2= json_data.getString("user_2");
-                    dataIni.image_1= json_data.getString("image_1");
-                    dataIni.image_2= json_data.getString("image_2");
                     dataIni.nama_barang_1= json_data.getString("nama_barang_1");
                     dataIni.nama_barang_2= json_data.getString("nama_barang_2");
-//                    dataIni.nominal_barang_1= json_data.getString("nominal_barang_1");
-//                    dataIni.nominal_barang_2= json_data.getString("nominal_barang_2");
+                    dataIni.nominal_barang_1= json_data.getString("nominal_barang_1");
+                    dataIni.nominal_barang_2= json_data.getString("nominal_barang_2");
                     dataIni.tanggal= json_data.getString("tanggal");
-                    dataIni.berhasil= json_data.getString("status");
+                    dataIni.status= json_data.getString("status");
 //                    JSONArray ti_small_image = json_data.getJSONArray("small_image");
 //                    data_tl.ti_smallimage=ti_small_image.getString(0);
 
@@ -190,7 +187,7 @@ public class jejakFragment extends Fragment {
                 }
 
                 // Setup and Handover data to recyclerview
-                mRVKos = (RecyclerView)getView().findViewById(R.id.timeline_list_jejak);
+                mRVKos = (RecyclerView)getView().findViewById(R.id.timeline_list_coba);
                 mAdapter = new jejakAdapter(getActivity(), data);
 
                 mRVKos.setAdapter(mAdapter);

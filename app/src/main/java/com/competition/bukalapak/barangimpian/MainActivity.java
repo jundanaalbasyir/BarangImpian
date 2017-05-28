@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.competition.bukalapak.barangimpian.controller.DrawerActivity;
-import com.competition.bukalapak.barangimpian.controller.biFragment;
+import com.competition.bukalapak.barangimpian.fragment.RecyclerViewFragment;
 import com.competition.bukalapak.barangimpian.fragment.cobaFragment;
 import com.competition.bukalapak.barangimpian.fragment.jejakFragment;
 import com.github.florent37.materialviewpager.MaterialViewPager;
@@ -42,7 +42,7 @@ public class MainActivity extends DrawerActivity {
                     case 0:
                         return cobaFragment.newInstance();
                     case 1:
-                        return biFragment.newInstance();
+                        return RecyclerViewFragment.newInstance();
                     case 2:
                         return jejakFragment.newInstance();
                     default:

@@ -13,6 +13,8 @@ public class data_jejak extends Object {
     public String user_2;
     public String nama_barang_1;
     public String nama_barang_2;
+    public String nominal_barang_1;
+    public String nominal_barang_2;
     public String tanggal;
-    public String berhasil;
+    public String status;
 }
